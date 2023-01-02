@@ -35,6 +35,7 @@ form.addEventListener('submit', createStory);
 function createStory(event) {
     event.preventDefault();
     story.classList.remove('hidden');
+    form.classList.add('hidden');
     noun1.innerText = noun1Input.value;
     place1.innerText = place1Input.value;
     num1.innerText = num1Input.value;
