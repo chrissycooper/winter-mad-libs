@@ -1,4 +1,4 @@
-var button = document.querySelector('button');
+var resetButton = document.querySelector('.reset');
 var story = document.querySelector('.story');
 var form = document.querySelector('form');
 
@@ -31,10 +31,12 @@ var food1Input = document.querySelector('#food1');
 
 
 form.addEventListener('submit', createStory);
+resetButton.addEventListener('click', resetpage);
 
 function createStory(event) {
     event.preventDefault();
     story.classList.remove('hidden');
+    resetButton.classList.remove('hidden');
     form.classList.add('hidden');
     noun1.innerText = noun1Input.value;
     place1.innerText = place1Input.value;
@@ -58,4 +60,10 @@ function resetForm() {
     clothing2Input.value = '';
     bev1Input.value = '';
     food1Input.value = '';
+}
+
+function resetPage() {
+    story.classList.add('hidden');
+    resetButton.classList.add('hidden');
+    form.classList.remove('hidden');
 }
