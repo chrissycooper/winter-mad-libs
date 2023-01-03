@@ -31,7 +31,7 @@ var food1Input = document.querySelector('#food1');
 
 
 form.addEventListener('submit', createStory);
-resetButton.addEventListener('click', resetpage);
+resetButton.addEventListener('click', resetPage);
 
 function createStory(event) {
     event.preventDefault();
